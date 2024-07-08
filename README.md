@@ -35,4 +35,21 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Updating readme
+## General idea of the app:
+![Screenshot from 2024-07-07 23-09-06](https://github.com/kausar128/discuss-next/assets/41689458/6c2b33fb-401c-4835-98a1-5bb2c04e736a)
+
+## using nextAuth and preparing signIn and signOut functionalities
+![Screenshot from 2024-07-07 20-17-06](https://github.com/kausar128/discuss-next/assets/41689458/333072a0-19f8-41ac-830a-ca4f4019bd8f)
+
+## Routing
+![Screenshot from 2024-07-07 23-12-26](https://github.com/kausar128/discuss-next/assets/41689458/47fb8e87-ba8e-483a-adba-681c95c803d6)
+
+## Path helpers to make it easy to edit the paths at one place if folder structure changes 
+![Screenshot from 2024-07-07 23-38-28](https://github.com/kausar128/discuss-next/assets/41689458/7b99b15a-5d84-42ec-8e7c-54dee43248fb)
+
+
+
+
+
+
+
