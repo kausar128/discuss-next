@@ -1,5 +1,5 @@
-'use server'
+'use server';
 
 export async function createComment() {
-    return {}
+  // TODO: revalidate post show page
 }
