@@ -13,7 +13,6 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from '@nextui-org/react';
-import { signOut as nextAuthSignOut } from 'next-auth/react';
 import { useSession } from 'next-auth/react';
 import * as actions from '@/actions';
 
@@ -31,12 +30,7 @@ export default function HeaderAuth() {
         </PopoverTrigger>
         <PopoverContent>
           <div className="p-4">
-            <form
-              action={async () => {
-                await actions.signOut();
-                await nextAuthSignOut({ redirect: false });
-              }}
-            >
+            <form action={actions.signOut}>
               <Button type="submit">Sign Out</Button>
             </form>
           </div>
