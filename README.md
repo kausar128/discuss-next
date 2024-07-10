@@ -22,6 +22,10 @@ See the new files generated here for db
 
 ![image](https://github.com/kausar128/discuss-next/assets/41689458/8581f71e-4469-43ff-825f-96f1c79a3f2f)
 
+It is ready to use now, we have exported db from this file in this project:
+![image](https://github.com/kausar128/discuss-next/assets/41689458/85190552-cecf-47e6-84bd-342aeeb401db)
+
+
 
 
 
