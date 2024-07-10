@@ -2,6 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Setting up database with Prisma 
+```
+npm install prisma
+npx prisma init --datasource-provider sqlite
+```
+
+It will generate schema file like this
+![image](https://github.com/kausar128/discuss-next/assets/41689458/3d785d55-c908-4e63-8754-cb2e51cc4d38)
+
+Take the content of schema file provided in this GitHub repo and replace in your generated file.
+Next up, initialize it using 
+```npx prisma migrate dev```
+![image](https://github.com/kausar128/discuss-next/assets/41689458/d5509515-1621-46d2-915d-9e639d2dee24)
+
+See the new files generated here for db
+![Uploading image.png…]()
+
+
+
+
 First, run the development server:
 
 ```bash
