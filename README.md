@@ -13,11 +13,15 @@ It will generate schema file like this
 
 Take the content of schema file provided in this GitHub repo and replace in your generated file.
 Next up, initialize it using 
-```npx prisma migrate dev```
+```
+npx prisma migrate dev
+```
 ![image](https://github.com/kausar128/discuss-next/assets/41689458/d5509515-1621-46d2-915d-9e639d2dee24)
 
 See the new files generated here for db
-![Uploading image.png…]()
+
+![image](https://github.com/kausar128/discuss-next/assets/41689458/8581f71e-4469-43ff-825f-96f1c79a3f2f)
+
 
 
 
