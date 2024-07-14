@@ -75,8 +75,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Path helpers to make it easy to edit the paths at one place if folder structure changes 
 ![Screenshot from 2024-07-07 23-38-28](https://github.com/kausar128/discuss-next/assets/41689458/7b99b15a-5d84-42ec-8e7c-54dee43248fb)
 
+## QueryStrings / search parameters in URLS
 
+![Screenshot from 2024-07-14 22-42-24](https://github.com/user-attachments/assets/59d2fcbd-4c30-42c3-88cc-dc8ed7b04c0d)
 
+![Screenshot from 2024-07-14 22-43-35](https://github.com/user-attachments/assets/d2f632b2-b4db-4c42-be02-33db02812b22)
 
 
 
