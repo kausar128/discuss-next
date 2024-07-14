@@ -27,9 +27,6 @@ It is ready to use now, we have exported db from this file in this project:
 
 
 
-
-
-
 First, run the development server:
 
 ```bash
@@ -80,6 +77,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![Screenshot from 2024-07-14 22-42-24](https://github.com/user-attachments/assets/59d2fcbd-4c30-42c3-88cc-dc8ed7b04c0d)
 
 ![Screenshot from 2024-07-14 22-43-35](https://github.com/user-attachments/assets/d2f632b2-b4db-4c42-be02-33db02812b22)
+
+## Accessing query string
+![image](https://github.com/user-attachments/assets/7679e1d2-709d-4aff-bdfc-64560785470a)
 
 
 
