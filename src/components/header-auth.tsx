@@ -1,12 +1,7 @@
 'use client';
-
-import Link from 'next/link';
+import { signOut as nextAuthSignOut } from "next-auth/react";
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
   NavbarItem,
-  Input,
   Button,
   Avatar,
   Popover,
@@ -30,7 +25,12 @@ export default function HeaderAuth() {
         </PopoverTrigger>
         <PopoverContent>
           <div className="p-4">
-            <form action={actions.signOut}>
+            <form
+              action={async () => {
+                await actions.signOut();
+                await nextAuthSignOut({ redirect: false });
+              }}
+            >
               <Button type="submit">Sign Out</Button>
             </form>
           </div>
