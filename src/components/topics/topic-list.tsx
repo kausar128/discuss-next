@@ -7,11 +7,12 @@ export default async function TopicList() {
   const topics = await db.topic.findMany();
 
   const renderedTopics = topics.map((topic) => {
+    const formattedSlug = topic.slug.replace(/%20/g, ' ');
     return (
       <div key={topic.id}>
-        <Link href={paths.topicShow(topic.slug)}>
+        <Link href={paths.topicShow(formattedSlug)}>
           <Chip color="warning" variant="shadow">
-            {topic.slug}
+            {formattedSlug}
           </Chip>
         </Link>
       </div>
