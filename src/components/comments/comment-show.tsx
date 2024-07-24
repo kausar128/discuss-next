@@ -1,7 +1,9 @@
-import type { CommentWithAuthor } from '@/db/queries/comments';
 import Image from 'next/image';
 import CommentCreateForm from '@/components/comments/comment-create-form';
 import { fetchCommentsByPostId } from '@/db/queries/comments';
+import { auth } from "@/auth";
+import { EditIcon } from '@nextui-org/shared-icons';
+
 
 interface CommentShowProps {
   commentId: string;
@@ -12,6 +14,7 @@ export default async function CommentShow({
   commentId,
   postId,
 }: CommentShowProps) {
+  const session = await auth();
   const comments = await fetchCommentsByPostId(postId);
   const comment = comments.find((c) => c.id === commentId);
 
@@ -38,7 +41,12 @@ export default async function CommentShow({
           <p className="text-sm font-medium text-gray-500">
             {comment.user.name}
           </p>
-          <p className="text-gray-900">{comment.content}</p>
+          <div className="text-gray-900">
+            <span>{comment.content}</span>
+            <span>{comment.user.id === session?.user?.id && (
+              <EditIcon />
+            )}</span>
+          </div>
 
           <CommentCreateForm postId={comment.postId} parentId={comment.id} />
         </div>

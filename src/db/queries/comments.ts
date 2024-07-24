@@ -3,7 +3,7 @@ import { cache } from 'react';
 import { db } from '@/db';
 
 export type CommentWithAuthor = Comment & {
-  user: { name: string | null; image: string | null };
+  user: { name: string | null; image: string | null; id: string };
 };
 
 export const fetchCommentsByPostId = cache(
@@ -15,6 +15,7 @@ export const fetchCommentsByPostId = cache(
           select: {
             name: true,
             image: true,
+            id: true,
           },
         },
       },
