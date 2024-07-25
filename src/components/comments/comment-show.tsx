@@ -2,7 +2,7 @@ import Image from 'next/image';
 import CommentCreateForm from '@/components/comments/comment-create-form';
 import { fetchCommentsByPostId } from '@/db/queries/comments';
 import { auth } from "@/auth";
-import { EditIcon } from '@nextui-org/shared-icons';
+import { EditIcon, DeleteIcon } from '@nextui-org/shared-icons';
 
 
 interface CommentShowProps {
@@ -38,17 +38,22 @@ export default async function CommentShow({
           className="w-10 h-10 rounded-full"
         />
         <div className="flex-1 space-y-3">
-          <p className="text-sm font-medium text-gray-500">
-            {comment.user.name}
-          </p>
+          <div className='flex justify-between'>
+            <p className="text-sm font-medium text-gray-500">
+              {comment.user.name}
+            </p>
+            {comment.user.id === session?.user?.id && (
+              <div className='flex'>
+                <CommentCreateForm postId={comment.postId} parentId={comment.id} />
+                <EditIcon className='mx-2' />
+                <DeleteIcon className='mx-2' />
+              </div>
+            )}
+          </div>
           <div className="text-gray-900">
             <span>{comment.content}</span>
-            <span>{comment.user.id === session?.user?.id && (
-              <EditIcon />
-            )}</span>
           </div>
 
-          <CommentCreateForm postId={comment.postId} parentId={comment.id} />
         </div>
       </div>
       <div className="pl-4">{renderedChildren}</div>

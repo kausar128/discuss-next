@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Textarea, Button } from '@nextui-org/react';
 import FormButton from '@/components/common/form-button';
 import * as actions from '@/actions';
+import { ChevronDownIcon } from '@nextui-org/shared-icons';
+
 
 interface CommentCreateFormProps {
   postId: string;
@@ -58,11 +60,14 @@ export default function CommentCreateForm({
   );
 
   return (
-    <div>
-      <Button size="sm" variant="light" onClick={() => setOpen(!open)}>
-        Reply
-      </Button>
+    <>
+      <div className='flex cursor-pointer'
+        onClick={() => setOpen(!open)}>
+        <ChevronDownIcon
+        />
+        <span className="text-sm">Reply</span>
+      </div>
       {open && form}
-    </div>
+    </>
   );
 }
