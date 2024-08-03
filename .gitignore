@@ -37,4 +37,4 @@ next-env.d.ts
 
 #db
 dev.db
-dev.db.journal
+dev.db-journal
